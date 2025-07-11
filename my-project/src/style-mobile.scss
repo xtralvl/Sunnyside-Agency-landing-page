@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;900&family=Barlow&display=swap');
+
+@media (max-width: 480px) {
+
+    html, body {
+        box-sizing: border-box;
+        margin: 0;
+
+        img {
+            max-width: 100%;
+        }
+
+        h1,
+        h2,
+        p {
+            padding: 0.5rem;
+        }
+
+        h1 {
+            margin-bottom: -2.4rem;
+        }
+
+        // === HEADER === //
+        header {
+            background-image: url('../frontend_mentor_resources/main sources/images/mobile/image-header.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-bottom: 20rem;
+            position: relative;
+
+            #logo-and-nav-container {
+                z-index: 100;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+                padding: 1.2rem 1rem;
+
+                #logo {
+                    height: 1.2rem;
+                }
+    
+                // === TOP NAVLIST HIDDEN INITIALLY ON MOBILE AND TAB === //
+                ul,
+                #contact {
+                    display: none;
+                }
+
+                #hamburger-icon {
+                    border: none;
+                    background-color: rgb(0, 0, 0, 0);
+                    cursor: pointer;
+
+                }
+
+            }
+
+            h1 {
+                text-align: center;
+                color: white;
+                font-weight: 900;
+                font-size: 2.4rem;
+                letter-spacing: 5px;
+            }
+
+            #arrow-down {
+                position: absolute;
+                width: 2.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 5rem; /* you can keep or move to top */
+              }
+        }
+
+        // === SERVICES CONTAINER === //
+
+        #services-container {
+            text-align: center;
+
+            h2 {
+                font-family:'Fraunces';
+                font-weight: 700;
+                color: hsl(212, 27%, 19%);
+                font-size: 2rem;
+                padding: 2rem 2rem 0 2rem;
+            }
+
+            p {
+                color: hsl(232, 10%, 55%);
+                font-family: 'Barlow';
+                padding: 0 1.5rem;
+                font-weight: 900;
+            }
+
+            .learn-more-button-container {
+                margin-bottom: 1.5rem;
+
+                .learn-more-button {
+                    position: relative;
+                    color: hsl(212, 27%, 19%);
+                    border: none;
+                    background-color: rgba(0, 0, 0, 0);
+                    margin-bottom: 3rem;
+                    z-index: 1001;
+                    font-weight: 700;
+                    font-family:'Fraunces';
+                    cursor: pointer;
+
+
+                }
+    
+                #yellow-line-decor,
+                #red-line-decor {
+                    position: absolute;
+                    width: 7.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-top: -3.5rem;
+                    border-radius: 15px;
+                    height: .6rem;
+                    z-index: 1000;
+                }
+
+                #yellow-line-decor {
+                    background-color: hsl(51, 100%, 49%, 0.3);
+                }
+
+                #red-line-decor {
+                    background-color: hsl(7, 99%, 70%, 0.2);
+                }
+
+            }
+
+            // === GRAPHIC DESIGN === //
+
+            #graphic-design-container {
+                background-image: url('../frontend_mentor_resources/main sources/images/mobile/image-graphic-design.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                height: 38rem;
+                padding: 0;
+                margin: 0;
+
+                h2 {
+                    padding-top: 25rem;
+                    color: hsl(167, 40%, 24%, 0.9);
+                    font-size: 2rem;
+                }
+
+                p {
+                    color: hsl(167, 34%, 26%);
+                    line-height: 1.6;
+                    font-weight: 900;
+                }
+        }
+
+            // === PHOTOGRAPHY  === //
+
+        #photography-container{
+            background-image: url('../frontend_mentor_resources/main sources/images/mobile/image-photography.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            height: 38rem;
+            padding: 0;
+            margin-top: -2.2rem;
+
+            h2 {
+                padding-top: 25rem;
+                color: hsl(212, 27%, 19%, 0.75);
+                font-size: 2rem;
+
+            }
+
+            p {
+                color: hsl(198, 62%, 26%);
+                line-height: 1.6;
+                font-weight: 900;
+            }
+    }
+        }
+
+    // === TESTIMONIALS === //
+    
+    #testimonials-container {
+        text-align: center;
+
+        h3 {
+            color: hsl(210, 4%, 67%);
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            margin: 3rem 0;
+        }
+
+
+        figure {
+            margin: 0;
+            padding: 0;
+
+
+            img {
+                border-radius: 50%;
+                width: 5rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: hsl(213, 9%, 39%);
+                font-family: 'Barlow';
+                margin: 0 -1rem 0 -1rem;
+                font-weight: 600;
+                line-height: 1.6;
+            }
+
+            .testimonial-name {
+                font-weight: 700;
+                font-family:'Fraunces';
+                color: hsl(212, 27%, 19%);
+                font-size: 1.2rem;
+                margin-bottom: -.2rem;
+                max-width: 100%;
+            }
+
+            .testimonial-profession {
+                color: hsl(210, 4%, 67%);
+                margin-bottom: 4rem;
+                font-size: .9rem;
+                max-width: 100%;
+
+            }
+    }
+
+    }
+
+    // === BOTTOM DECOR IMAGES === //
+
+    #bottom-decor-images-container {
+        margin-top: -1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
+        .decor-img {
+            margin-bottom: -.3rem;
+        }
+    }
+
+    // === FOOTER === //
+
+    footer {
+
+        background-color: #90D4C6;
+        text-align: center;
+
+        #logo-footer {
+            margin-top: 3.5rem;
+            width: 10rem;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            margin: 2rem;
+            padding: 0 !important;
+
+
+            li {
+                list-style: none;
+                font-family: 'Barlow';
+                margin-bottom: 2rem;
+
+
+                a {
+                    text-decoration: none;
+                    color: #458D7E;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        #social-media-container {
+            display: flex;
+            justify-content: center;
+
+            a {
+                padding: 0 1rem;
+                margin: 0 0 4rem 0;
+            }
+        }
+    }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
