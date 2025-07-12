@@ -2,27 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style-mobile.scss" />
     <title>Sunnyside Agency</title>
   </head>
 
   <body>
+
+    <!-- DARK OVERLAY ON SMALL SCREEN WHEN THE NAV MENU IS OPENED -->
+    <div id="overlay"></div>
+
     <!-- LOGO AND NAV -->
     <header>
       <div id="logo-and-nav-container">
         <img  id="logo" src="frontend_mentor_resources/main sources/images/logo.svg" alt="Sunnyside Agency logo" />
         <nav aria-label="Main Navigation">
           <button id="hamburger-icon" aria-label="Toggle navigation menu">
-            <img src="frontend_mentor_resources/main sources/images/icon-hamburger.svg" alt="" />
+            <img id="hamburger-img" src="frontend_mentor_resources/main sources/images/icon-hamburger.svg" alt="" />
+            <img id="close-icon" src="frontend_mentor_resources/main sources/images/close-icon.png" alt="" />
           </button>
-          <ul>
+          <ul id='desktop-navbar'>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Projects</a></li>
+            <button id="contact">Contact</button>
           </ul>
-          <button id="contact">Contact</button>
         </nav>
       </div>
       <h1>WE ARE CREATIVES</h1>
@@ -118,22 +122,35 @@
 
     </section>
 
+
+    <!-- SMALL SCREEN NAV MENU-->
+    <div id="small-screen-nav-container">
+      <nav  >
+        <ul>
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+        </ul>
+      </nav>
+      <img  id="logo-in-mobile-navbar" src="frontend_mentor_resources/main sources/images/logo.svg" alt="Sunnyside Agency logo" />
+      </div> 
+
     <!-- FOOTER -->
     <footer>
       <img id="logo-footer" src="frontend_mentor_resources/main sources/images/logo.svg" alt="Sunnyside Agency logo" />
       <nav aria-label="Footer Navigation">
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
         </ul>
       </nav>
 
       <div id="social-media-container" aria-label="Social media links">
-        <a href="#"><img src="frontend_mentor_resources/main sources/images/icon-facebook.svg" alt="Facebook" /></a>
-        <a href="#"><img src="frontend_mentor_resources/main sources/images/icon-instagram.svg" alt="Instagram" /></a>
-        <a href="#"><img src="frontend_mentor_resources/main sources/images/icon-twitter.svg" alt="Twitter" /></a>
-        <a href="#"><img src="frontend_mentor_resources/main sources/images/icon-pinterest.svg" alt="Pinterest" /></a>
+        <img src="frontend_mentor_resources/main sources/images/icon-facebook.svg" alt="Facebook" />
+        <img src="frontend_mentor_resources/main sources/images/icon-instagram.svg" alt="Instagram" />
+        <img src="frontend_mentor_resources/main sources/images/icon-twitter.svg" alt="Twitter" />
+        <img src="frontend_mentor_resources/main sources/images/icon-pinterest.svg" alt="Pinterest" />
       </div>
     </footer>
 

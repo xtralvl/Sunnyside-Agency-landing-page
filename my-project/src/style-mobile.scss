@@ -6,6 +6,32 @@
         box-sizing: border-box;
         margin: 0;
 
+        body.no-scroll {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+          }
+          
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0); // Start fully transparent
+            z-index: 1500;
+            opacity: 0; // Initial state
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+            pointer-events: none; // Prevent interaction when invisible
+          }
+          
+          #overlay.active {
+            background-color: rgba(0, 0, 0, 0.5); // Target color
+            opacity: 1;
+            pointer-events: all; // Allow click when visible
+          }
+                    
         img {
             max-width: 100%;
         }
@@ -43,19 +69,49 @@
                 }
     
                 // === TOP NAVLIST HIDDEN INITIALLY ON MOBILE AND TAB === //
-                ul,
-                #contact {
+                #desktop-navbar {
                     display: none;
                 }
 
                 #hamburger-icon {
+                    position: relative;
+                    background: transparent;
                     border: none;
-                    background-color: rgb(0, 0, 0, 0);
-                    cursor: pointer;
-
-                }
-
-            }
+                    width: 24px;
+                    height: 18px;
+                  
+                    img,
+                    svg {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 24px;
+                      height: 18px;
+                    }
+                  
+                    #hamburger-img {
+                      display: block;
+                    }
+                  
+                    #close-icon {
+                      z-index: 4000;
+                      display: none;
+                      height: 1.5rem;
+                    }
+                  
+                    &.menu-open {
+                      #hamburger-img {
+                        display: none;
+                      }
+                  
+                      #close-icon {
+                        
+                        z-index: 4000;
+                        display: block;
+                      }
+                    }
+                  }
+                              }
 
             h1 {
                 text-align: center;
@@ -273,13 +329,10 @@
                 list-style: none;
                 font-family: 'Barlow';
                 margin-bottom: 2rem;
-
-
-                a {
-                    text-decoration: none;
-                    color: #458D7E;
-                    font-weight: 900;
-                }
+                text-decoration: none;
+                color: #458D7E;
+                font-weight: 900;
+                cursor: pointer;
             }
         }
 
@@ -287,16 +340,60 @@
             display: flex;
             justify-content: center;
 
-            a {
+            img {
                 padding: 0 1rem;
                 margin: 0 0 4rem 0;
             }
         }
     }
 
+    // ==== SMALL SCREEN NAV === //
 
+    #small-screen-nav-container {
+        z-index: 2000;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80vw;
+        height: 100vh;
+        background-color: white;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-
+        #logo-in-mobile-navbar {
+            width: 6rem;
+            background-color: black;
+            padding: 0.6rem;
+            position: absolute;
+            bottom: 5rem;
+            opacity: 0.06;
+            border-radius: 15px;
+        }
+      
+        ul {
+          list-style: none;
+          padding: 0;
+          margin-top: -5rem;
+          
+      
+          li {
+            font-family: 'Fraunces';
+            font-size: 3rem;
+            margin: 5rem 0;
+            color: hsl(212, 27%, 19%);
+            cursor: pointer;
+          }
+        }
+      }
+      
+      #small-screen-nav-container.open {
+        transform: translateX(0);
+      }
+      
     }
 
 
