@@ -2,6 +2,10 @@
 
 @media (max-width: 480px) {
 
+    #second-hero-image-desktop {
+        display: none;
+    }
+
     html, body {
         box-sizing: border-box;
         margin: 0;
@@ -48,7 +52,7 @@
 
         // === HEADER === //
         header {
-            background-image: url('../frontend_mentor_resources/main sources/images/header-background-smallscreen-cropped.png');
+            background-image: url('../frontend_mentor_resources/main sources/images/mobile/image-header.jpg');
             background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -112,7 +116,7 @@
                       }
                     }
                   }
-                              }
+                }
 
             h1 {
                 text-align: center;
@@ -122,7 +126,28 @@
                 letter-spacing: 5px;
             }
 
-        }
+            @keyframes floatUpDown {
+                0% {
+                  transform: translateX(-50%) translateY(0);
+                }
+                50% {
+                  transform: translateX(-50%) translateY(-25px);
+                }
+                100% {
+                  transform: translateX(-50%) translateY(0);
+                }
+              }
+              
+              #arrow {
+                position: absolute;
+                left: 50%;
+                bottom: 12rem;
+                transform: translateX(-50%);
+                z-index: 10;
+                animation: floatUpDown 2s ease-in-out infinite;
+              }
+              
+            }
 
         // === SERVICES CONTAINER === // 
 

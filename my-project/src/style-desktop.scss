@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;900&family=Barlow&display=swap');
 
-@media ((min-width: 480px) and (max-width: 900px)) {
 
-    #second-hero-image-desktop {
-        display: none;
-    }
 
+
+@media (min-width: 900px ) {
 
 
     html, body {
@@ -70,19 +68,48 @@
                 justify-content: space-between;
                 align-items: center;
                 color: white;
-                padding: 1.2rem 1rem;
+                padding-left: 1rem;
+                margin-top: -1rem;
 
                 #logo {
                     height: 1.2rem;
-                    max-width: 100% !important;
+                    width: 15rem;
+                    height: 3rem;
                 }
     
                 // === TOP NAVLIST HIDDEN INITIALLY ON MOBILE AND TAB === //
                 #desktop-navbar {
-                    display: none;
+                    display: flex;
+                    padding: 1rem;
+                    list-style: none;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none ;
+                        margin-left: 3rem;
+                        color: white;
+                        font-size: 1.2rem;
+                        font-family: 'Barlow';
+                        cursor: pointer;
+
+                    }
+
+                    #contact-desktop {
+                        margin-left: 3rem;
+                        border: none;
+                        border-radius: 30px;
+                        padding: 1rem 2.2rem;
+                        font-family:'Fraunces';
+                        font-size: 1rem;
+                        font-weight: 900;
+                        cursor: pointer;
+                    }
+                    
                 }
 
                 #hamburger-icon {
+                    display: none;
                     position: relative;
                     background: transparent;
                     border: none;
@@ -146,7 +173,7 @@
                 position: absolute;
                 left: 50%;
                 width: 3rem;
-                bottom: 25rem;
+                bottom: 7rem;
                 transform: translateX(-50%);
                 z-index: 10;
                 animation: floatUpDown 2s ease-in-out infinite;
@@ -154,27 +181,81 @@
         }
 
         #second-hero-image {
-            min-width: 100% !important;
+            display: none;
+            width: 100%;
         }
 
         // === SERVICES CONTAINER === //
 
         #services-container {
             text-align: center;
+            display: grid;
+            grid-template-rows: auto auto auto;
+
+            #first-row {
+                min-height: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-row: 1;
+                align-items: center;
+                width: 100vw;
+
+                #second-hero-image-desktop {
+                    grid-column: 2;
+                    min-width: 100%;
+                    min-height: 100%;
+
+                }
+
+                .first-row-texts {
+                    height: auto;
+                    grid-column: 1;
+                    grid-row: 1;
+                    padding: 2rem;
+                }
+            }
+
+            #second-row {
+                grid-row: 2;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-row: 2;
+                align-items: center;
+
+                #stand-out-img {
+                    min-height: 100%;
+                }
+
+
+                .second-row-texts {
+                    height: auto;
+                    grid-column: 2;
+                    padding: 2rem;
+
+                }
+
+            }
+
+            #third-row {
+                grid-row: 3;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+            }
 
             h2 {
                 font-family:'Fraunces';
                 font-weight: 700;
                 color: hsl(212, 27%, 19%);
-                padding: 2rem 2rem 0 2rem;
             }
+
 
             p {
                 color: hsl(232, 10%, 55%);
                 font-family: 'Barlow';
-                padding: 0 2rem;
                 font-weight: 900;
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+
             }
 
             .learn-more-button-container {
@@ -195,8 +276,8 @@
 
                 }
     
-                #yellow-line-decor,
-                #red-line-decor {
+                #yellow-line-decor {
+                    display: none;
                     position: absolute;
                     width: 7.5rem;
                     left: 50%;
@@ -211,9 +292,25 @@
                     background-color: hsl(51, 100%, 49%, 0.3);
                 }
 
-                #red-line-decor {
-                    background-color: hsl(7, 99%, 70%, 0.2);
+                #yellow-line-decor-desktop {
+                    position: absolute;
+                    width: 7.5rem;
+                    left: 25.35%;
+                    transform: translateX(-50%);
+                    margin-top: -3.5rem;
+                    border-radius: 15px;
+                    height: .6rem;
+                    z-index: 2000;
                 }
+
+                #yellow-line-decor-desktop {
+                    background-color: hsla(0, 100%, 49%, 0.3);
+                }
+
+
+                /* #red-line-decor {
+                    background-color: hsl(7, 99%, 70%, 0.2);
+                } */
 
             }
 
@@ -243,6 +340,7 @@
                     color: hsl(167, 34%, 26%);
                     line-height: 1.6;
                     font-weight: 900;
+                    padding: 0 2rem;
                 }
         }
 
@@ -256,7 +354,6 @@
             position: relative;
             height: 38rem;
             padding: 0;
-            margin-top: -2.2rem;
 
             h2 {
                 padding-top: 25rem;
@@ -269,6 +366,8 @@
                 color: hsl(198, 62%, 26%);
                 line-height: 1.6;
                 font-weight: 900;
+                padding: 0 2rem;
+
             }
     }
         }
@@ -387,6 +486,7 @@
     // ==== SMALL SCREEN NAV === //
 
     #small-screen-nav-container {
+        display: none !important;
         z-index: 2000;
         position: fixed;
         top: 0;
@@ -396,7 +496,6 @@
         background-color: white;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
