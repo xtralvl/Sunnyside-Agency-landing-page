@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;900&family=Barlow&display=swap');
 
-@media (max-width: 480px) {
+@media ((min-width: 480px) and (max-width: 900px)) {
+
 
     html, body {
         box-sizing: border-box;
@@ -43,12 +44,13 @@
         }
 
         h1 {
-            margin-bottom: -2.4rem;
+            padding: 0 5rem;
         }
+
 
         // === HEADER === //
         header {
-            background-image: url('../frontend_mentor_resources/main sources/images/header-background-smallscreen-cropped.png');
+            background-image: url('../frontend_mentor_resources/main sources/images/desktop/image-header.jpg');
             background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -67,6 +69,7 @@
 
                 #logo {
                     height: 1.2rem;
+                    max-width: 100% !important;
                 }
     
                 // === TOP NAVLIST HIDDEN INITIALLY ON MOBILE AND TAB === //
@@ -122,9 +125,20 @@
                 letter-spacing: 5px;
             }
 
+            #arrow-down {
+                position: absolute;
+                width: 3rem;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 13rem; /* you can keep or move to top */
+              }
         }
 
-        // === SERVICES CONTAINER === // 
+        #second-hero-image {
+            min-width: 100% !important;
+        }
+
+        // === SERVICES CONTAINER === //
 
         #services-container {
             text-align: center;
@@ -133,15 +147,15 @@
                 font-family:'Fraunces';
                 font-weight: 700;
                 color: hsl(212, 27%, 19%);
-                font-size: 2rem;
                 padding: 2rem 2rem 0 2rem;
             }
 
             p {
                 color: hsl(232, 10%, 55%);
                 font-family: 'Barlow';
-                padding: 0 1.5rem;
+                padding: 0 2rem;
                 font-weight: 900;
+                font-size: 1.2rem;
             }
 
             .learn-more-button-container {
@@ -157,6 +171,7 @@
                     font-weight: 700;
                     font-family:'Fraunces';
                     cursor: pointer;
+                    font-size: 1.2rem;
 
 
                 }
@@ -183,10 +198,14 @@
 
             }
 
+            #stand-out-img {
+                min-width: 100% ;
+            }
+
             // === GRAPHIC DESIGN === //
 
             #graphic-design-container {
-                background-image: url('../frontend_mentor_resources/main sources/images/mobile/image-graphic-design.jpg');
+                background-image: url('../frontend_mentor_resources/main sources/images/desktop/image-graphic-design.jpg');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -211,7 +230,7 @@
             // === PHOTOGRAPHY  === //
 
         #photography-container{
-            background-image: url('../frontend_mentor_resources/main sources/images/mobile/image-photography.jpg');
+            background-image: url('../frontend_mentor_resources/main sources/images/desktop/image-photography.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -243,7 +262,7 @@
         h3 {
             color: hsl(210, 4%, 67%);
             letter-spacing: 2px;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin: 3rem 0;
         }
 
@@ -255,32 +274,36 @@
 
             img {
                 border-radius: 50%;
-                width: 5rem;
+                width: 6.5rem;
                 margin-bottom: 1rem;
             }
 
             p {
                 color: hsl(213, 9%, 39%);
                 font-family: 'Barlow';
-                margin: 0 -1rem 0 -1rem;
+                margin: 0 -1rem -1rem -1rem;
                 font-weight: 600;
                 line-height: 1.6;
+                font-size: 1.1rem;
+                padding: 1rem;
             }
 
             .testimonial-name {
                 font-weight: 700;
                 font-family:'Fraunces';
                 color: hsl(212, 27%, 19%);
-                font-size: 1.2rem;
-                margin-bottom: -.2rem;
-                max-width: 100%;
+                font-size: 1.3rem;
+                margin-bottom: -1rem;
+                margin-right: 0;
             }
 
             .testimonial-profession {
                 color: hsl(210, 4%, 67%);
                 margin-bottom: 4rem;
-                font-size: .9rem;
+                font-size: 1rem;
                 max-width: 100%;
+                margin-right: 0;
+
 
             }
     }
