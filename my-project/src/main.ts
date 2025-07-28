@@ -11,3 +11,13 @@ hamburgerButton.addEventListener('click', () => {
   // Disable or enable scrolling
   body.classList.toggle('no-scroll', menuIsOpen);
 });
+
+const arrow = document.getElementById('arrow') as HTMLElement;
+
+arrow.addEventListener('click', () => {
+  const arrowTarget = document.getElementById('services-container') as HTMLElement;
+
+  if (arrowTarget) {
+    arrowTarget.scrollIntoView({ behavior: 'smooth'});
+  }
+});
