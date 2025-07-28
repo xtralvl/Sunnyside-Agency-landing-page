@@ -187,6 +187,11 @@
                     font-family:'Fraunces';
                     cursor: pointer;
 
+                    &:hover {
+                        opacity: 0.6;
+                    }
+
+
 
                 }
     
