@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;900&family=Barlow&display=swap');
 
-
-
-
 @media (min-width: 900px ) {
-
 
     html, body {
         box-sizing: border-box;
@@ -16,7 +12,6 @@
             width: 100%;
           }
           
-
         #overlay {
             position: fixed;
             top: 0;
@@ -36,9 +31,6 @@
             pointer-events: all; // Allow click when visible
           }
                     
-        img {
-            max-width: 100%;
-        }
 
         h1,
         h2,
@@ -59,7 +51,12 @@
             background-size: cover;
             position: relative;
             width: 100%;
-            height: 80vh;
+            height: 110vh;
+
+            img {
+                max-width: 100%;
+            }
+    
 
             #logo-and-nav-container {
                 z-index: 100;
@@ -138,6 +135,7 @@
                       left: 0;
                       width: 24px;
                       height: 18px;
+                      
                     }
                   
                     #hamburger-img {
@@ -188,7 +186,7 @@
                 position: absolute;
                 left: 50%;
                 width: 3rem;
-                bottom: 7rem;
+                bottom: 22rem;
                 transform: translateX(-50%);
                 z-index: 10;
                 animation: floatUpDown 2s ease-in-out infinite;
@@ -198,11 +196,17 @@
         #second-hero-image {
             display: none;
             width: 100%;
+            max-width: 100%;
         }
 
         // === SERVICES CONTAINER === //
 
         #services-container {
+
+            img {
+                max-width: 100%;
+            }
+
             text-align: center;
             display: grid;
             grid-template-rows: auto auto auto;
@@ -287,8 +291,6 @@
                     font-family:'Fraunces';
                     cursor: pointer;
                     font-size: 1.2rem;
-
-
                 }
     
                 #yellow-line-decor {
@@ -390,6 +392,11 @@
     // === TESTIMONIALS === //
     
     #testimonials-container {
+
+        img {
+            max-width: 100%;
+        }
+
         text-align: center;
 
         h3 {
@@ -448,12 +455,16 @@
     #bottom-decor-images-container {
         margin-top: -1rem;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        
-        .decor-img {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+
+        img {
+            width: 100%;
+
             margin-bottom: -.3rem;
         }
+
+        
     }
 
     // === FOOTER === //

@@ -61,7 +61,7 @@
             background-size: cover;
             position: relative;
             width: 100%;
-            height: 80vh;
+            height: 110vh;
 
             #logo-and-nav-container {
                 z-index: 100;
@@ -146,7 +146,7 @@
                 position: absolute;
                 left: 50%;
                 width: 3rem;
-                bottom: 12rem;
+                bottom: 22rem;
                 transform: translateX(-50%);
                 z-index: 10;
                 animation: floatUpDown 2s ease-in-out infinite;
